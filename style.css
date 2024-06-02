@@ -201,6 +201,9 @@ li.setting {
 		font-size: 12px;
 	}
 	/* Hero */
+	.hero-section {
+		min-height: 100vh;
+	}
 	.hero-section .hero-right .sia img {
 		width: 200px;
 	}
