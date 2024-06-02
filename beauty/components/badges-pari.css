@@ -1,0 +1,125 @@
+/* Base Badge Button */
+.badge-btn {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Basic Badge */
+  .badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 0.2em 0.5em; /* Use relative units */
+    font-size: 0.75rem; /* Use rem for font size */
+  }
+  
+  /* Rounded Badge */
+  .rounded-bdg {
+    padding: 0.3em 0.6em;
+    border: none;
+    border-radius: 40px;
+    box-shadow: none;
+  }
+  
+  /* Variations */
+  
+  /* Small Badge */
+  .badge-small {
+    padding: 0.1em 0.3em;
+    font-size: 0.625rem;
+  }
+  
+  /* Large Badge */
+  .badge-large {
+    padding: 0.2em 0.5em;
+    font-size: 1rem;
+  }
+  
+  /* Different Colors */
+  .badge-blue {
+    background-color: blue;
+  }
+  
+  .badge-green {
+    background-color: green;
+  }
+  
+  .badge-yellow {
+    background-color: yellow;
+    color: black;
+  }
+  
+  .badge-purple {
+    background-color: purple;
+  }
+  
+  /* Different Shapes */
+  .badge-square {
+    border-radius: 0;
+  }
+  
+  .badge-rounded {
+    border-radius: 0.375em; /* Use relative unit */
+  }
+  
+  /* Different Positions */
+  .badge-top-left {
+    top: -5px;
+    left: -5px;
+    right: auto;
+  }
+  
+  .badge-bottom-right {
+    top: auto;
+    right: -10px;
+    bottom: -5px;
+  }
+  
+  .badge-bottom-left {
+    top: auto;
+    left: -5px;
+    bottom: -5px;
+  }
+  
+  /* Pulsating Badge */
+  .badge-pulse {
+    animation: pulse 1s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Text Badge */
+  .badge-text {
+    position: static;
+    background-color: transparent;
+    color: red;
+    padding: 0;
+    font-size: 0.875rem;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 600px) {
+    .badge {
+      font-size: 0.625rem;
+      padding: 0.1em 0.3em;
+    }
+  
+    .badge-large {
+      font-size: 0.875rem;
+      padding: 0.15em 0.4em;
+    }
+  }
+  

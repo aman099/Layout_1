@@ -1,0 +1,137 @@
+nav[aria-label="navbar"] {
+	display: flex;
+	justify-content: var(--navbar-horizontal-alignment);
+	align-items: center;
+	padding: var(--navbar-padding-vertical) var(--navbar-padding-horizontal);
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+	height: var(--navbar-height);
+	background-color: var(--navbar-background-color);
+	gap: var(--navbar-flex-gap);
+	width: 100%;
+	flex-grow: 1;
+}
+
+nav[aria-label="navbar"] > header {
+	display: flex;
+	align-items: center;
+	flex-grow: 1;
+	/* Allow the header to take up remaining space */
+}
+
+nav[aria-label="navbar"] > header > img {
+	height: var(--navbar-height);
+	/* Set the height of the logo to match navbar height */
+	width: auto;
+	/* Allow the width to adjust according to the height */
+	margin-right: 10px;
+	/* Add some spacing between logo and text */
+}
+
+nav[aria-label="navbar"] h2 {
+	margin: 0;
+	color: var(--navbar-text-color);
+	/* flex-grow: -1; */
+}
+
+nav[aria-label="navbar"] > ul {
+	display: flex;
+	gap: var(--navbar-item-gap);
+	list-style: none;
+	align-items: center;
+	justify-content: space-between;
+	padding-left: 0;
+}
+
+nav[aria-label="navbar"] > ul li a {
+	padding: var(--navbar-item-padding);
+	border-radius: var(--navbar-item-border-radius);
+	font-size: var(--navbar-item-font-size);
+	color: var(--navbar-text-color);
+	transition: background-color var(--navbar-menu-transition-speed) ease;
+	font-weight: 500;
+}
+
+nav[aria-label="navbar"] > ul li a:hover {
+	background-color: var(--navbar-hover-background-color);
+}
+
+/* Hamburger menu */
+nav[aria-label="navbar"] > .nav-btn {
+	display: none;
+	cursor: pointer;
+}
+
+nav[aria-label="navbar"] > #nav-check {
+	display: none;
+}
+
+/* @media screen and (max-width: 1000px) {
+  nav:not([role="tabs"]):not([role="sidebar"])>ul {
+
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+      rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    position: absolute;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: calc(100vh - var(--navbar-height) - 3px);
+    transition: all var(--navbar-menu-transition-speed) ease;
+    overflow-y: hidden;
+    top: var(--navbar-height);
+    right: 0;
+    text-align: left;
+    width: 0;
+    z-index: 999;
+    background-color: #fff;
+  }
+
+  nav[aria-label="navbar"]>.nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: var(--navbar-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav[aria-label="navbar"]>.nav-btn>label {
+    display: inline-block;
+    width: 50px;
+    padding: var(--navbar-button-padding);
+  }
+
+  nav[aria-label="navbar"]>.nav-btn>label>span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid var(--navbar-text-color);
+    cursor: pointer;
+    transition: transform var(--navbar-menu-transition-speed) ease;
+  }
+
+  nav[aria-label="navbar"]>#nav-check:not(:checked)~ul {
+    width: 0px;
+  }
+
+  nav[aria-label="navbar"]>#nav-check:checked~ul {
+    width: var(--navbar-menu-width);
+    overflow-y: auto;
+  }
+} */
+
+/* Adjust the width of the navbar menu based on the viewport */
+/* @media screen and (max-width: var(--breakpoint-sm)) {
+  nav[aria-label="navbar"]>ul {
+    width: 100%;
+    max-width: var(--navbar-menu-width);
+    transition: width var(--navbar-menu-transition-speed) ease;
+  } */
+
+@media screen and (max-width: var(--breakpoint-sm)) {
+	nav[aria-label="navbar"] > header {
+		flex-grow: 0;
+		/* Set back to default to allow logo to take only its needed space */
+	}
+}

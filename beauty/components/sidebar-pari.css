@@ -1,0 +1,60 @@
+/* Sidebar */
+nav[id="mySidenav"] {
+    display: none;
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--secondary-color);
+    overflow-x: hidden;
+    padding-top: 60px;
+}
+
+nav[id="mySidenav"] a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: var(--background-color);
+    display: block;
+}
+
+nav[id="mySidenav"] a:hover {
+    color: var(--primary-color);
+}
+
+nav[id="mySidenav"] .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Responsive Sidebar */
+@media screen and (max-height: 450px) {
+    nav[id="mySidenav"] {
+        padding-top: 15px;
+    }
+
+    nav[id="mySidenav"] a {
+        font-size: var(--font-size-xl);
+    }
+}
+
+/* Fix for IE11 */
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+    nav[id="mySidenav"] {
+        display: block;
+    }
+}
+
+/* Cross-browser compatibility for IE11 */
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+    nav[id="mySidenav"] {
+        display: block;
+    }
+}

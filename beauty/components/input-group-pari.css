@@ -1,0 +1,129 @@
+/* Input Group Styles */
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: var(--spacing-lg);
+}
+
+.input-group>input,
+.input-group>textarea {
+    flex: 1;
+    padding: var(--spacing-md);
+    border: 1px solid var(--form-input-border-color);
+    border-radius: var(--border-radius);
+    box-sizing: border-box;
+}
+
+.input-group>.input-group-prepend>span,
+.input-group>.input-group-append>span,
+.input-group>.input-group-prepend>.input-group-text,
+.input-group>.input-group-append>.input-group-text {
+    background-color: var(--background-color);
+    padding: var(--spacing-md);
+    border: 1px solid var(--form-input-border-color);
+    border-radius: var(--border-radius);
+}
+
+.input-group>.input-group-prepend>span:last-child,
+.input-group>.input-group-append>span:last-child,
+.input-group>.input-group-prepend>.input-group-text:last-child,
+.input-group>.input-group-append>.input-group-text:last-child {
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.input-group>.input-group-prepend>.input-group-text,
+.input-group>.input-group-append>.input-group-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-group .form-control {
+    margin-left: calc(var(--static-spacing-unit) * -1);
+    border-radius: 0;
+}
+
+.input-group .form-control:first-child {
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+.input-group .form-control:last-child {
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+/* Button Styles */
+.btn [aria-label="inputgroup"] {
+    padding: var(--spacing-md);
+    border: 1px solid var(--form-input-border-color);
+    border-radius: var(--border-radius);
+    background-color: var(--primary-color);
+    color: var(--button-text-color);
+    cursor: pointer;
+}
+
+.btn:hover [ aria-label="inputgroup"] {
+    background-color: var(--button-hover-background-color);
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: var(--background-color);
+    border: 1px solid var(--form-input-border-color);
+    box-shadow: var(--box-shadow);
+}
+
+.dropdown-menu a {
+    padding: var(--spacing-md);
+    display: block;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--secondary-color);
+}
+
+.dropdown.show .dropdown-menu {
+    display: block;
+}
+
+/* Dropdown Toggle Styles */
+.dropdown-toggle::after,
+.input-group-prepend.dropdown .dropdown-toggle::after,
+.input-group-append.dropdown .dropdown-toggle::after {
+    content: "\25bc";
+    margin-left: var(--spacing-xs);
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: var(--breakpoint-sm)) {
+    .input-group {
+        flex-direction: column;
+    }
+
+    .input-group>input,
+    .input-group>textarea,
+    .input-group-prepend,
+    .input-group-append {
+        width: 100%;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .input-group-prepend>.input-group-text,
+    .input-group-append>.input-group-text,
+    .input-group-prepend>span,
+    .input-group-append>span {
+        border-radius: var(--border-radius);
+    }
+}
+
+/* Fix for IE11 */
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+    .input-group {
+        display: -ms-flexbox;
+        display: flex;
+    }
+}

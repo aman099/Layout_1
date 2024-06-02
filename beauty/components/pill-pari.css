@@ -1,0 +1,63 @@
+/* Pills container styles */
+.pills-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px; /* Adjust as needed */
+    margin: 0 auto;
+  }
+  nav[aria-label="pills"]{
+    background-color: transparent;
+    box-shadow: none;
+  }
+  /* Pills styles */
+  nav[aria-label="pills"]{
+    display: flex;
+    border: var(--border-width) var(--border-style) var(--border-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+  }
+  
+  nav[aria-label="pills"] button {
+    flex: 1;
+    gap: 0px;
+    text-align: center;
+    padding: var(--spacing-xs);
+    background-color: var(--accent-color);
+    border-radius: 2rem 1.5rem 0rem 0rem;
+    margin: 1rem;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background-color var(--transition-default);
+  }
+  
+  nav[aria-label="pills"] button:hover {
+    background-color: var(--hover-color);
+  }
+  
+  nav[aria-label="pills"] button.active {
+    background-color: var(--active-color);
+    color: var(--text-color);
+  }
+  
+  /* Pill content styles */
+  .pill-content {
+    display: none;
+    padding: var(--spacing-md);
+  }
+  
+  .pill-content h2 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .pill-content p {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+  }
+  
+  /* Show the active pill content */
+  .pill-content.active {
+    display: block;
+  }
+  
+  

@@ -1,0 +1,62 @@
+section[data-type="horiz-card_container"] {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+article[data-type="horiz-card"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    transition: box-shadow 0.3s ease;
+}
+
+article[data-type="horiz-card"]:hover {
+    box-shadow: var(--box-shadow);
+}
+
+figure {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    border-radius: var(--border-radius);
+}
+
+div[data-type="horiz-card-content"] {
+    max-width: 600px;
+}
+
+h3 [aria-label="darkcard"] {
+    margin: 0 0 10px 0;
+}
+
+p[aria-label="darkcard "] {
+    margin: 0 0 10px 0;
+}
+
+a[data-type="horiz-card-btn"] {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--background-color);
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s ease;
+}
+
+a[data-type="horiz-card-btn"]:hover {
+    background-color: var(--primary-color);
+}
+
+@media (min-width: 768px) {
+    article[data-type="horiz-card"] {
+        flex-direction: row;
+    }
+}

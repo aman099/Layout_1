@@ -1,0 +1,55 @@
+section article {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+/* Style the <h1> elements */
+section article h1 {
+    color: var(--secondary-color);
+    font-size: var(--font-size-xl);
+    margin-bottom: 10px;
+}
+
+/* Style the <p> elements */
+section article p {
+    color: var(--secondary-color);
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-body);
+    margin-bottom: 10px;
+}
+
+/* Style the <a> elements */
+section article a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+}
+
+/* Hover effect for <a> elements */
+section article a:hover {
+    background-color: var(--primary-color);
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+
+    /* Reduce font size for better readability on smaller screens */
+    section article h1 {
+        font-size: var(--font-size-md);
+    }
+
+    section article p {
+        font-size: var(--font-size-md);
+    }
+
+    section article a {
+        padding: 8px 16px;
+        /* Adjust padding for smaller screens */
+    }
+}

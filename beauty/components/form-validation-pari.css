@@ -1,0 +1,97 @@
+/* Form Styles */
+label {
+    display: block;
+    margin-bottom: var(--spacing-md);
+    font-weight: var(--font-weight-bold);
+    color: var(--secondary-color);
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    border: 1px solid var(--form-input-border-color);
+    border-radius: var(--border-radius);
+    background-color: var(--form-input-background-color);
+    font-size: var(--font-size-md);
+    transition: border-color 0.3s ease-in-out;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--text-color);
+    outline: none;
+}
+
+[data-input-group] {
+    display: flex;
+    align-items: center;
+}
+
+[data-input-group]>span {
+    padding: var(--spacing-md);
+    background: var(--background-color);
+    border: 1px solid var(--form-input-border-color);
+    border-right: none;
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+[data-input-group]>input {
+    border-left: none;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+[data-valid-feedback],
+[data-invalid-feedback] {
+    font-size: var(--font-size-sm);
+    margin-top: calc(var(--spacing-md) * -1);
+    margin-bottom: var(--spacing-md);
+}
+
+[data-valid-feedback] {
+    color: var(--valid-color);
+}
+
+[data-invalid-feedback] {
+    color: var(--invalid-color);
+}
+
+/* Button Styles */
+button[data-button] {
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    padding: var(--spacing-md);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button[data-button]:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: var(--breakpoint-sm)) {
+
+    [data-body],
+    [data-main] {
+        padding: var(--spacing-md);
+    }
+
+    button[data-button] {
+        width: 100%;
+    }
+}
+
+/* IE11 Compatibility */
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+    [data-input-group] {
+        display: -ms-flexbox;
+        display: flex;
+    }
+}

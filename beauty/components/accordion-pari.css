@@ -1,0 +1,49 @@
+details summary {
+    list-style: none;
+    padding: var(--spacing-md);
+    background-color: var(--background-text);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+details:not(.dropdown) p {
+    padding: var(--spacing-md);
+    font-size: inherit;
+    line-height: var(--line-height-base);
+}
+
+details summary::after {
+    display: block;
+    width: calc(var(--static-spacing-unit) * 1.5);
+    height: calc(calc(var(--static-spacing-unit) * 1.5) * 1.5);
+    margin-inline-start: calc(var(--spacing-xs) * 0.25);
+    float: right;
+    transform: rotate(0);
+    transition: transform 0.3s ease;
+    background-image: var(--dropdown-icon-chevron);
+    background-position: right center;
+    background-size: calc(var(--static-spacing-unit) * 1.5) auto;
+    background-repeat: no-repeat;
+    content: "";
+    transition: transform 0.3s ease;
+    /* -webkit-transform: rotate(45deg); */
+    /* Safari and Chrome */
+    -moz-transform: rotate(45deg);
+    /* Firefox */
+    -ms-transform: rotate(45deg);
+    /* IE 9 */
+    -o-transform: rotate(45deg);
+}
+
+/* Rotate the arrow when details element is open */
+details[open] summary::after {
+    transform: rotate(180deg);
+}
+
+@media screen and (max-width: var(--breakpoint-sm)) {
+    details summary::after {
+        width: calc(var(--static-spacing-unit) * 0.3);
+        height: calc(var(--static-spacing-unit) * 0.3);
+        margin-left: calc(var(--spacing-xs) * 0.15);
+    }
+}

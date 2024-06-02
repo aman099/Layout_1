@@ -1,0 +1,84 @@
+/* Section Styles */
+section[data-type="card-container"] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+/* Article Styles */
+article[data-type="card"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    width: 100%;
+    max-width: 300px;
+    box-shadow: var(--box-shadow);
+    transition: box-shadow 0.3s ease;
+}
+
+article[data-type="card"]:hover {
+    box-shadow: var(--box-shadow);
+}
+
+/* Figure Styles */
+figure[data-type="card-img-container"] {
+    margin: 0;
+    width: 100%;
+}
+
+/* Image Styles */
+img[data-type="card-img"] {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+}
+
+/* Card Content Styles */
+div[data-type="card-content"] {
+    text-align: center;
+}
+
+/* Card Title Styles */
+h3[data-type="card-title"] {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+/* Card Text Styles */
+p[data-type="card-text"] {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+/* Card Button Styles */
+a[data-type="card-btn"] {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--background-color);
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+a[data-type="card-btn"]:hover {
+    background-color: var(--primary-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    section[data-type="card-container"] {
+        padding: 10px;
+    }
+
+    article[data-type="card"] {
+        max-width: 100%;
+    }
+}

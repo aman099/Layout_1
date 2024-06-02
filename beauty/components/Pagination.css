@@ -1,0 +1,103 @@
+/* Pagination Styles */
+nav[aria-label="Pagination"] {
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    display: -webkit-box; /* Vendor prefix */
+    display: -moz-box; /* Vendor prefix */
+    display: -ms-flexbox; /* Vendor prefix */
+    display: -webkit-flex; /* Vendor prefix */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav[aria-label="Pagination"] >ul{
+    gap: 0px;
+}
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0 ;
+    justify-content: center;
+    margin: var(--spacing-xs) var(--spacing-xs);
+}
+
+.page-item {
+    margin: 0 var(--spacing-xs);
+}
+
+.pg-active {
+    background-color: var(--active-color);
+}
+
+.btn-disabled {
+    background-color: var(--text-color-body);
+}
+
+.page-link {
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    transition: background-color var(--transition-default), color var(--transition-default);
+}
+
+.page-link:hover {
+    background-color: var(--hover-color);
+    color: var(--secondary-text);
+}
+
+.page-item.active .page-link {
+    background-color: var(--hover-color);
+    color: var(--secondary-text);
+}
+
+.page-item.disabled .page-link {
+    pointer-events: none;
+    background-color: var(--secondary-color);
+    color: var(--secondary-text);
+    border: 1px solid var(--secondary-color);
+}
+
+/* Pagination Size Variations */
+.pagination-lg .page-link {
+    padding: var(--spacing-sm) var(--spacing-md);
+}
+
+.pagination-sm .page-link {
+    padding: var(--spacing-xs) var(--spacing-xs);
+}
+
+/* Responsive Styles */
+@media (max-width: var(--breakpoint-md)) {
+    .page-link {
+        padding: var(--spacing-xs) var(--spacing-md);
+    }
+
+    .pagination-lg .page-link {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+
+    .pagination-sm .page-link {
+        padding: var(--spacing-xs) var(--spacing-md);
+    }
+}
+
+.pagination button:disabled {
+    background-color: #e9e3e3; /* Disabled button background color */
+    cursor: not-allowed; /* Show disabled cursor */
+}
+
+@media (max-width: var(--breakpoint-sm)) {
+    .page-link {
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+
+    .pagination-lg .page-link,
+    .pagination-sm .page-link {
+        padding: var(--spacing-sm) var(--spacing-sm);
+    }
+}

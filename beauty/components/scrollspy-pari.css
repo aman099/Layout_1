@@ -1,0 +1,63 @@
+/* List Group Item Styles */
+nav[role="list-example"] {
+    position: fixed;
+    top: 0;
+    /* Adjust according to your layout */
+    left: 0;
+    /* Fixed position on the left side */
+    width: 200px;
+    background-color: var(--bg-color);
+    z-index: 1000;
+    /* Ensure it's above other content */
+}
+
+nav[role="list-example"] a {
+    display: block;
+    padding: 10px;
+    margin-bottom: -1px;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+/* Media Query for Small Screens */
+nav[role="list-example"] a:hover,
+nav[role="list-example"] a.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Scrollspy Example Styles */
+#scrollspy-example {
+    position: relative;
+    padding: 20px;
+    margin-left: var(--scrollspy-margin-left);
+    border: 1px solid var(--border-color);
+}
+
+/* Section Styles */
+article section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+h2 [ aria-label="List of Items"] {
+    margin-top: 0;
+}
+
+/* Media Query for Small Screens */
+@media screen and (max-width: var(--breakpoint-sm)) {
+    body {
+        padding-top: 80px;
+    }
+
+    nav[role="list-example"] {
+        width: 100px;
+        /* top: calc(var(--navbar-height) + 20px); */
+    }
+
+    #scrollspy-example {
+        margin-left: 0;
+    }
+}
