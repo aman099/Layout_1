@@ -6,6 +6,62 @@
 	box-sizing: border-box;
 }
 
+li.people-li,
+li.setting-li,
+li.three-dots-li {
+	position: relative;
+	cursor: pointer;
+}
+li.people-li ul.people,
+li.setting-li ul.setting,
+li.three-dots-li ul.three-dots {
+	display: none;
+	/* font-size: 14px; */
+	/* padding: 10px; */
+	width: fit-content;
+	padding-left: 0;
+	list-style: none;
+	position: absolute;
+	top: 30px;
+	left: 0;
+	background-color: #fff;
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.288);
+	border-radius: 10px;
+	z-index: 4;
+}
+li.three-dots-li ul.three-dots {
+	top: 24px;
+	left: -90px;
+	/* right: 60px; */
+}
+li.setting-li ul.setting.active,
+li.people-li ul.people.active,
+li.three-dots-li ul.three-dots.active {
+	display: block;
+}
+
+li.people-li ul.people li,
+li.setting-li ul.setting li,
+li.three-dots-li ul.three-dots li {
+	padding: 5px 20px;
+	width: 100%;
+	/*  */
+	transition: all 0.2s;
+}
+li.people-li ul.people li:hover,
+li.setting-li ul.setting li:hover,
+li.three-dots-li ul.three-dots li:hover {
+	background-color: #ebe8e3;
+	/* background-color: teal; */
+	cursor: pointer;
+}
+li.people-li ul.people li:nth-of-type(4),
+li.setting-li ul.setting li:nth-of-type(4),
+li.three-dots-li ul.three-dots li:nth-of-type(4) {
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
 :root {
 	--bg-color: #ebe8e3;
 }
@@ -193,6 +249,11 @@ li.setting {
 }
 
 @media only screen and (max-width: 500px) {
+	li.three-dots-li ul.three-dots {
+		top: 20px;
+		left: -80px;
+	}
+	/*  */
 	/* navbar */
 	li.setting {
 		margin-right: 20px;
